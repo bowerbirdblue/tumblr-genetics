@@ -59,10 +59,11 @@ POST-SUBMIT WIDGETS FUNCTION
 def submitWidgets():
     tk.Label(rightFrame, text="Text entered:", font=(font, 17), relief="groove").pack(side="top", anchor="w")
     tk.Label(rightFrame, text=preText, font=(font, 15), width=1, height=1).pack(side="top", anchor="w", fill="both", expand=1)
-    print(f"Submitted Text:{preText}")
+    print(f"\nSubmitted Text: {preText}")
     tk.Label(rightFrame, text="Regex results:", font=(font, 17), relief="groove").pack(side="top", anchor="w")
     tk.Label(rightFrame, text=mySeq, font=(font, 15), width=1, height=1).pack(side="top", anchor="w", fill="both", expand=1)
-    print(f"Regex Results:{mySeq}")
+    tk.Label(rightFrame, text="Closest match:", font=(font, 17), relief="groove").pack(side="top", anchor="w")
+    print(f"\nRegex Results:{mySeq}")
     
 
 '''
@@ -81,7 +82,7 @@ def blasting():
     blast_record = blast.read(result_stream)
     hit = blast_record[0]
     org = hit.target.description
-    print(f"Closest Match: {org}")
+    print(f"\nClosest Match: {org}")
     tk.Label(rightFrame, text=org, font=(font, 15)).pack(side="top",anchor="w")
 '''
 SUBMISSION FUNCTION
