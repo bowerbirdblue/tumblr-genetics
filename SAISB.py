@@ -22,17 +22,13 @@ font =("Autour One")
 '''CREATES FRAMES FOR TKINTER WINDOW'''
 leftFrame = tk.Frame(root, width=400, height=300, relief="raised", borderwidth=5) # creates text entry frame
 leftFrame.place(anchor="nw", x=0, y=0, width=400, height=300) # places text entry frame (top left)
-
 subFrame = tk.Frame(root, width=400, height=50, relief="sunken", borderwidth=5) # creates submit button frame
 subFrame.place(anchor="nw", x=0, y=300, width=400, height=60) # places submit button frame (middle left, under leftFrame)
-
 rightFrame = tk.Frame(root, width=400, height=350, relief="raised", borderwidth=5) # creates (currently) empty frame
 rightFrame.place(anchor="nw", x=400, y=0, width=400, height=700) # places frame (top right)
-
 '''
 VARIABLES
 '''
-
 '''
 DATE TIME FUNCTION
 -
@@ -67,7 +63,6 @@ def submitWidgets():
     seqLab.pack(side="top", anchor="w", fill="x")
     print(f"\nRegex Results:{mySeq}")
     tk.Label(rightFrame, text="Closest match:", font=(font, 17), relief="groove").pack(side="top", anchor="w")
-
 '''
 BLAST FUNCTION
 '''
@@ -93,8 +88,7 @@ SUBMISSION FUNCTION
     - submits text entered into text entry box
     - calls regex function using afformentioned text
     - clears text box
-    - clears my_blast
-    
+    - clears my_blast   
 '''
 def submitFunc():
     global preText
@@ -104,7 +98,6 @@ def submitFunc():
     submitWidgets()
     textInput.delete("1.0", "end")   
     blasting()
-
 '''
 APP WINDOW FUNCTION
 -
